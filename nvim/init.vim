@@ -33,6 +33,7 @@ Plug 'ntpeters/vim-better-whitespace' " 显示空白符
 Plug 'hiberabyss/vim-rest-console' " fork by diepm/vim-res-console
 Plug 'skywind3000/quickmenu.vim' " 自定义菜单
 Plug 'buoto/gotests-vim' " 根据函数内容生成test实例
+Plug 'chemzqm/wxapp.vim'
 
 " Plug 'nathanaelkane/vim-indent-guides'
 " Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}

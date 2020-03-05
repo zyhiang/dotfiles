@@ -1,0 +1,9 @@
+gui:
+  theme:
+    activebordercolor:
+    - blue
+    - bold
+    inactivebordercolor:
+    - white
+    lighttheme: true
+reporting: "off"
