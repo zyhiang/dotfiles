@@ -1,0 +1,11 @@
+Host dmit
+HostName 154.17.0.147
+User root
+Port 22
+IdentityFile ~/.ssh/id_rsa
+
+Host 47
+HostName 47.100.62.25
+User root
+Port 22
+IdentityFile ~/.ssh/id_rsa

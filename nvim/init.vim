@@ -35,6 +35,7 @@ Plug 'skywind3000/quickmenu.vim' " 自定义菜单
 Plug 'buoto/gotests-vim' " 根据函数内容生成test实例
 Plug 'chemzqm/wxapp.vim'
 
+" Plug 'morhetz/gruvbox'
 " Plug 'nathanaelkane/vim-indent-guides'
 " Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 " Plug 'Raimondi/delimitMate' " 双括号
@@ -44,6 +45,7 @@ call plug#end()
 " =================config=================
 
 colorscheme onedark
+" colorscheme space_vim_theme
 " colorscheme gruvbox
 " colorscheme gotham256
 "
@@ -105,6 +107,7 @@ autocmd FileType python,shell,bash,vim,go,markdown set et sw=4 ts=4 sts=4
 autocmd FileType javascript,html,css,xml,yaml,rest set et sw=2 ts=2 sts=2
 
 
+" py文件保存的时候自动执行
 " au BufWrite *.py :Autoformat
 " au BufWrite *.py :Isort
 "===========================map=============================
