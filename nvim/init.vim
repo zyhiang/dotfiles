@@ -277,7 +277,7 @@ call defx#custom#option('_',{
       \ 'columns': 'indent:git:icons:filename',
       \ 'split'     : 'vertical',
       \ 'direction' : 'topleft',
-      \ 'winwidth'  : 35,
+      \ 'winwidth'  : 30,
       \ 'show_ignored_files': 0,
       \ 'buffer_name': '',
       \ 'toggle': 1,
