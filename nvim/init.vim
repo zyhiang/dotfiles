@@ -5,9 +5,8 @@ let mapleader = ','
 
 let g:python3_host_prog = '/usr/local/bin/python3'
 
-
 call plug#begin('~/.config/nvim/plugged')
-Plug 'joshdick/onedark.vim' " 主题
+Plug 'zyhiang/onedark.vim' " 主题
 Plug 'tpope/vim-commentary' " 注释
 Plug 'ybian/smartim' " 中文输入法
 Plug 'mhinz/vim-startify' " 启动页
@@ -28,16 +27,14 @@ Plug 'josa42/vim-lightline-coc'
 Plug 'iamcco/markdown-preview.vim'
 Plug 'Chiel92/vim-autoformat'
 Plug 'fisadev/vim-isort'
-Plug 'whatyouhide/vim-gotham'
 Plug 'ntpeters/vim-better-whitespace' " 显示空白符
 Plug 'hiberabyss/vim-rest-console' " fork by diepm/vim-res-console
 Plug 'skywind3000/quickmenu.vim' " 自定义菜单
-Plug 'buoto/gotests-vim' " 根据函数内容生成test实例
-Plug 'chemzqm/wxapp.vim'
+Plug 'buoto/gotests-vim' " 根据函数内容生成gotest实例
+Plug 'chemzqm/wxapp.vim' " 微信小程序扩展
 
-" Plug 'morhetz/gruvbox'
-" Plug 'nathanaelkane/vim-indent-guides'
-" Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
+" Plug 'nathanaelkane/vim-indent-guides' " 缩进线
+" Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'} " python 高亮
 " Plug 'Raimondi/delimitMate' " 双括号
 call plug#end()
 
@@ -45,10 +42,7 @@ call plug#end()
 " =================config=================
 
 colorscheme onedark
-" colorscheme space_vim_theme
-" colorscheme gruvbox
-" colorscheme gotham256
-"
+
 " 允许在有未保存的修改时切换缓冲区
 set hidden
 " 英文单词在换行时不被截断
@@ -106,7 +100,6 @@ set fileencodings=utf-8,gbk,latin1
 autocmd FileType python,shell,bash,vim,go,markdown set et sw=4 ts=4 sts=4
 autocmd FileType javascript,html,css,xml,yaml,rest set et sw=2 ts=2 sts=2
 
-
 " py文件保存的时候自动执行
 " au BufWrite *.py :Autoformat
 " au BufWrite *.py :Isort
@@ -160,14 +153,13 @@ let g:lightline.component_expand = {
 let g:lightline.component_type = {
     \   'linter_warnings': 'warning',
     \   'linter_errors': 'error',
-    \   'linter_ok': 'left',
     \ }
 
 let g:lightline.active = {
     \ 'left': [
     \   [ 'mode', 'paste' ],
     \   [ 'readonly', 'filename', 'modified', 'gitbranch'],
-    \   ['coc_errors', 'coc_warnings', 'coc_ok'],
+    \   ['coc_errors', 'coc_warnings'],
     \  ],
     \ }
 
@@ -188,17 +180,17 @@ let g:go_fmt_command = "goimports"
 
 " --------------------------gitgutter-------------------
  " ▍ ▎ ▏
-let g:gitgutter_sign_added = '▎'
-let g:gitgutter_sign_modified = '▎'
-let g:gitgutter_sign_removed = '▎'
-let g:gitgutter_sign_removed_first_line = '▎'
-let g:gitgutter_sign_modified_removed = '▎'
+let g:gitgutter_sign_added = '+'
+let g:gitgutter_sign_modified = '~'
+let g:gitgutter_sign_removed = '-'
+let g:gitgutter_sign_removed_first_line = '^'
+let g:gitgutter_sign_modified_removed = '<'
 
 
 highlight GitGutterAdd    guifg=#587C0C
 highlight GitGutterChange guifg=#0C7D9D
 highlight GitGutterDelete guifg=#94151B
-highlight CocErrorSign guifg=#B96B70
+highlight GitGutterChangeDelete guifg=#94151B
 
 " ----------------------------end------------------------
 
@@ -206,6 +198,8 @@ highlight CocErrorSign guifg=#B96B70
 " 让错误文本显示为红色
 " highlight CocErrorHighlight ctermfg=Red  guifg=#b91a22
 " don't give |ins-completion-menu| messages.
+highlight CocErrorSign guifg=#B96B70
+
 set shortmess+=c
 
 " always show signcolumns

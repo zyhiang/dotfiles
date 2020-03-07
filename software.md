@@ -32,21 +32,26 @@
 -   brew
     -   direnv
     -   lazygit
-    -   lua 
+    -   lua
     -   ranger
-    -   tmux          
-    -   autoenv         
-    -   mycli           
-    -   pandoc          
-    -   tree           
+    -   tmux
+    -   autoenv
+    -   mycli
+    -   pandoc
+    -   tree
     -   yabai
-    -   autojump        
-    -   skhd        
+    -   autojump
+    -   skhd
     -   universal-ctags
-    -   ctags         
-    -   proxychains-ng  
-    -   sqlite          
+    -   ctags
+    -   proxychains-ng
+    -   sqlite
     -   wget
     -   nvim
 -   frp
 -   z.lua
+
+
+
+#### 尝试
+-   Hammerspoon
