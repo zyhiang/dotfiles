@@ -1,0 +1,34 @@
+{
+    // "diagnostic.virtualTextPrefix": "--> ",
+    "diagnostic.virtualText": true,
+    // 错误提示直接显示在行后
+    "diagnostic.signOffset": 99999,
+    // 标志偏移
+	"diagnostic.errorSign": "●",
+	"diagnostic.warningSign": "●",
+    "diagnostic.displayByAle": false,
+    "diagnostic.refreshOnInsertMode": true,
+    "suggest.triggerAfterInsertEnter": true,
+    "coc.preferences.snippetStatusText": "Ⓢ ",
+    "suggest.timeout": 500,
+    "suggest.noselect": false,
+    "suggest.detailField":"abbr",
+    // "suggest.snippetIndicator": "🌟",
+    "suggest.triggerCompletionWait": 50,
+
+    "languageserver": {
+        "golang": {
+          "command": "gopls",
+          "rootPatterns": ["go.mod"],
+          "filetypes": ["go"]
+        }
+    },
+    "snippets.ultisnips.directories": [
+      "UltiSnips",
+      "gosnippets/UltiSnips"
+    ],
+    "python.linting.pylintPath": "flake8",
+    "python.autoComplete.addBrackets":true
+
+
+}
